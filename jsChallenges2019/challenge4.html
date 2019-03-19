@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Challenge 4</title>
+    <style>
+    body{
+        margin: 2%;
+        border: 1px solid black;
+        background-color: #b3b3b3;
+    }
+    #image{
+        line-height:325px;
+        width: 388px;
+        height: 325px;
+        border:5px solid black;
+        margin:0 auto;
+        background-repeat: no-repeat;
+        color:#FFFFFF;
+        text-align: center;
+        background-color: #8e68ff;
+        background-size: 100%;
+        margin-bottom:25px;
+        font-size:150%;
+        background-image: url('');
+    }
+    .preview{
+        width:10%;
+        margin-left:17%;
+        border: 10px solid black;
+    }
+    img{
+        width:100%;
+    }
+    h1{
+        text-align: center;
+    }
+    </style>
+
+    <script>
+    function upDate(previewPic){
+        console.log(previewPic);
+        document.querySelector("#image").innerHTML = previewPic.alt;
+        document.querySelector("#image").style.backgroundSize = 'cover';
+        document.querySelector("#image").style.backgroundImage = "url(" + previewPic.src + ")";
+    }
+
+        
+
+            
+ /* In this function you should 
+    1) change the url for the background image of the div with the id = "image" 
+    to the source file of the preview image
+    
+    2) Change the text  of the div with the id = "image" 
+    to the alt text of the preview image 
+    */
+
+    function unDo(){
+       document.querySelector("#image").innerHTML = "Hover or tab over/into an image below.";
+       document.querySelector("#image").style.backgroundImage = "url()"
+
+     /* In this function you should 
+    1) Update the url for the background image of the div with the id = "image" 
+    back to the orginal-image.  You can use the css code to see what that original URL was
+    
+    2) Change the text  of the div with the id = "image" 
+    back to the original text.  You can use the html code to see what that original text was
+    */
+        
+    }
+    // https://codepen.io/ColleenEMc/pen/XmZzWw
+    </script>
+</head>
+
+<body>
+    <h1>Challenge 4</h1>
+        <div id = "image">
+            Hover or tab over/into an image below.
+        </div>
+
+        <!-- Your code goes in the img tag below.  Make sure to react to "hovering" and "tabbing": -->
+        <img class = "preview" tabindex = "1" 
+            alt = "mom and baby sloth" 
+            src = "https://images.theconversation.com/files/134262/original/image-20160816-12998-tf916v.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=926&fit=clip"
+            onmouseover = "upDate(this)" onmouseleave = "unDo()";>
+
+
+        <!-- Your code goes in the img tag below.  Make sure to react to "hovering" and "tabbing": -->  
+        <img class = "preview" tabindex = "1" 
+            alt = "sloth upside-down at beach" 
+            src = "https://kids.nationalgeographic.com/content/dam/kids/photos/animals/Mammals/Q-Z/sloth-beach-upside-down.adapt.945.1.jpg"
+            onmouseover = "upDate(this)" onmouseleave = "unDo()";>
+    
+        <!-- Your code goes in the img tag below.  Make sure to react to "hovering" and "tabbing": -->
+        <img class = "preview" tabindex = "1" 
+            src = "https://c402277.ssl.cf1.rackcdn.com/photos/14785/images/story_full_width/shutterstock_532108075.jpg?1512507049" 
+            alt = "lookout sloth"
+            onmouseover = "upDate(this)" onmouseleave = "unDo()";>
+
+        <!-- Your code goes in the img tag below.  Make sure to react to "hovering" and "tabbing": -->
+        <img class = "preview" tabindex = "1" 
+            alt = "dancing baby sloth" 
+            src = "https://static01.nyt.com/images/2014/01/28/science/28SLOT_SPAN/28SLOT-articleLarge.jpg?quality=75&auto=webp&disable=upscale"
+            onmouseover = "upDate(this)" onmouseleave = "unDo()";>
+
+        <!-- Your code goes in the img tag below.  Make sure to react to "hovering" and "tabbing": -->  
+        <img class = "preview" tabindex = "1" 
+            alt = "right side up hanging sloth" 
+            src = "https://media.mnn.com/assets/images/2018/04/LItSL_4.jpg.990x0_q80_crop-smart.jpg"
+            onmouseover = "upDate(this)" onmouseleave = "unDo()";>
+    
+        <!-- Your code goes in the img tag below.  Make sure to react to "hovering" and "tabbing": -->
+        <img class = "preview" tabindex = "1" 
+            src = "http://www.slothville.com/wp-content/uploads/2017/10/sleep-cinabun-n-tree.jpg" 
+            alt = "sleeping baby sloth"
+            onmouseover = "upDate(this)" onmouseleave = "unDo()";>
+</body>
+</html>
+    
